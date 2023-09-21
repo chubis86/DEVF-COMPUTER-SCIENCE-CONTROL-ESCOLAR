@@ -1,4 +1,4 @@
-export default class Grupo{
+class Grupo{
     constructor(idGrupo, Nombre){
         this.idGrupo=idGrupo;
         this.Nombre=Nombre;

@@ -1,7 +1,3 @@
-console.log("Entramos");
-import  Alumno  from "./alumno.js";
-import  Clase  from "./clase.js";
-import  Grupo  from "./grupo.js";
 
 const alumnos = []; //Array para manejar los alumnos
 const clases = []; //Array para manejar las clases
@@ -46,28 +42,31 @@ const mostrarGruposRender = () =>{
 
 ///////FUNCIONES PARA AGREGAR NUEVOS ALUMNOS, CLASES y GRUPOS
 
-function nuevaClase(idClase, Nombre){
+function nuevaClase(){
+    let idClase=document.querySelector('#idClaseForm').value;
+    let Nombre=document.querySelector('#nombreClaseForm').value;
     let nuevaClase = new Clase(idClase, Nombre);
     clases.push(nuevaClase);
+    mostrarClasesRender();
 }
 
-function nuevoGrupo(idGrupo, Nombre){
+function nuevoGrupo(){
+    let idGrupo=document.querySelector('#idGrupoForm').value;
+    let Nombre=document.querySelector('#nombreGrupoForm').value;
     let nuevoGrupo = new Grupo(idGrupo, Nombre);
     grupos.push(nuevoGrupo);
+    console.log(grupos);
+    mostrarGruposRender();
+    console.log("Estamos");
 }
 
-function nuevoAlumno(matricula, nombre, apellidos, edad){
+function nuevoAlumno(){
+    let matricula=document.querySelector('#matriculaAlumnoForm').value;
+    let nombre=document.querySelector('#nombreAlumnoForm').value;
+    let apellidos=document.querySelector('#apellidosAlumnoForm').value;
+    let edad=document.querySelector('#edadAlumnoForm').value;
+
     let nuevoAlumno = new Alumno(matricula, nombre, apellidos, edad);
     alumnos.push(nuevoAlumno);
+    mostrarAlumnosRender();
 }
-
-nuevaClase('666', 'ESPAÑOL');
-nuevoGrupo('666', 'A');
-nuevoAlumno('666', 'EFREN', 'NARVAEZ MANTILLA', '37');
-
-
-/* console.log(alumnos);
-console.log(clases);
-console.log(grupos);
-
-console.log("PROBANDO"); */

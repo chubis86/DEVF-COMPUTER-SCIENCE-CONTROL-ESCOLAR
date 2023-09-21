@@ -1,4 +1,4 @@
-export default class Clase{
+class Clase{
     constructor(idClase, Nombre){
         this.idClase=idClase;
         this.Nombre=Nombre;

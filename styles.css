@@ -1,0 +1,13 @@
+.generales{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.lista{
+    width: 30%;
+    height:300px;
+    margin-top: 10px;
+    margin:0px 0px;
+}

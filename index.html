@@ -4,26 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <title>BASE DE DATOS - SIMULADOR ESCUELA</title>
 </head>
 <body>
     <div class="container">
-        <div class="row" class="generales">
-            <div class="col" id="mostrarAlumnos">ALUMNOS</div>
-            <div class="col" id="mostrarClases">CLASES</div>
-            <div class="col" id="mostrarGrupos">GRUPOS</div>
+        <div class="row generales">
+            <div class="lista" id="mostrarAlumnos"></div>
+            <div class="lista" id="mostrarClases"></div>
+            <div class="lista" id="mostrarGrupos"></div>
         </div>
         <div class="row" class="acciones">
-            <div class="col">ALUMNOS</div>
-            <div class="col">CLASES</div>
-            <div class="col">GRUPOS</div>
+            <div class="col" class="agregarAlumnoForm">
+                <h3>AGREGAR ALUMNOS</h3>
+                <form id="agregarAlumnoForm" onsubmit="nuevoAlumno()">
+                    <div class="mb-3">
+                        <label for="matriculaAlumnoForm" class="form-label">MATRÍCULA</label>
+                        <input type="text" class="form-control" id="matriculaAlumnoForm" required placeholder="Matrícula del alumno...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombreAlumnoForm" class="form-label">NOMBRE</label>
+                        <input type="text" class="form-control" id="nombreAlumnoForm"  required placeholder="Nombre del alumno...">
+                    </div>    
+                    <div class="mb-3">    
+                        <label for="apellidosAlumnoForm" class="form-label">APELLIDOS</label>
+                        <input type="text" class="form-control" id="apellidosAlumnoForm" required placeholder="Apellidos del alumno...">
+                    </div>
+                    <div class="mb-3">    
+                        <label for="edadAlumnoForm" class="form-label">EDAD</label>
+                        <input type="number" step="1" min="15" class="form-control" required id="edadAlumnoForm" placeholder="Edad del alumno...">
+                    </div>
+                    <div class="mb-3">
+                        <input type="button" onclick="nuevoAlumno()" id="submitAlumnoForm" class="btn btn-success form-control" value="Agregar Alumno">
+                    </div>
+
+                </form>
+            </div>
+            <div class="col" class="agregarClaseForm">
+                <h3>AGREGAR CLASES</h3>
+                <form id="agregarAlumnoForm" onsubmit="nuevaClase()">
+                    <div class="mb-3">
+                        <label for="idClaseForm" class="form-label">ID CLASE</label>
+                        <input type="text" class="form-control" id="idClaseForm"  required placeholder="ID de la clase...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombreClaseForm" class="form-label">NOMBRE</label>
+                        <input type="text" class="form-control" id="nombreClaseForm" required placeholder="Nombre de la clase...">
+                    </div>    
+                    <div class="mb-3">
+                        <input type="button"   onclick="nuevaClase()" id="submitClaseForm" class="btn btn-success form-control" value="Agregar Clase">
+                    </div>    
+                </form>
+            </div>
+            <div class="col" class="agregarGrupoForm">
+                <h3>AGREGAR GRUPOS</h3>
+                <form id="agregarGrupoForm">
+                    <div class="mb-3">
+                        <label for="idGrupoForm" class="form-label">ID Grupo</label>
+                        <input type="text" class="form-control" id="idGrupoForm" required placeholder="ID del grupo...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombreGrupoForm" class="form-label">NOMBRE</label>
+                        <input type="text" class="form-control" id="nombreGrupoForm" required placeholder="Nombre del grupo...">
+                    </div>    
+                    <div class="mb-3">
+                        <input type="button"  onclick="nuevoGrupo()" id="submitGrupoForm" class="btn btn-success form-control" value="Agregar Grupo">
+                    </div>
+                        
+                </form>
+            </div>
         </div>
         <div class="row">
             <div class="col">FUNCIONES</div>
         </div>
     </div>
 
-    <script src="main.js" type="module"></script>
+    <script defer src="alumno.js"></script>
+    <script defer src="clase.js"></script>
+    <script defer src="grupo.js"></script>
+    <script defer src="main.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

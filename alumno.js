@@ -1,4 +1,4 @@
-export default class Alumno{
+class Alumno{
 
     constructor(matricula, nombre, apellidos, edad, materias, calficaciones){
         this.Matricula=matricula;
