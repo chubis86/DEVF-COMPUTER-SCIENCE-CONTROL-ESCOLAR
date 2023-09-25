@@ -33,7 +33,7 @@
         </div>
         
         <div class="row">
-            <h3>Agregar alumnos a clase</h3>
+            <h3>Calificaciones por clase</h3>
             <div class="">
                 
                 <form>
@@ -43,20 +43,25 @@
                             <option selected disabled></option>
                         </select>
                     </div>
-                    <div>
-                        <label for="alumno" class="form-label">ALUMNO</label>
-                        <select id="alumno" class="form-control">
-                            <option selected disabled></option>
-                        </select>
-                    </div>    
-                    <div>
-                        <input type="button" id="submitAlumnoClase" class="btn btn-success form-control" value="AGREGAR ALUMNO">
-                    </div>
+                        
+                    
                         
                 </form>
             </div>
         </div>
         <div class="row" id="mostrarDatosClase">
+            <table  class="table table-dark">
+                <thead>
+                    <td>MATRÍCULA</td>
+                    <td>NOMBRE</td>
+                    <td>CALIFICACIONES</td>
+                </thead>
+                <tbody id="datosAlumnos">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="calificacionPromedioClase" class="row">
             
         </div>
         
@@ -68,7 +73,7 @@
     <script defer src="alumno.js"></script>
     <script defer src="clase.js"></script>
     <script defer src="grupo.js"></script>
-    <script defer src="agregarAClases.js"></script>    
+    <script defer src="calificaciones.js"></script>    
     
 </body>
 </html>

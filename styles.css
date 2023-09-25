@@ -64,3 +64,7 @@
     left: 0px;
     width: 100%;
 }
+
+#mostrarDatosClase, #mostrarDatosGrupo{
+    margin-top: 30px;
+}
